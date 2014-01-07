@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<script type="text/javascript">
+			var url = window.location.href;
+			if((pos = url.indexOf("?")) != -1) {
+				url = url.substr(pos + 1);
+				console.log(url);
+			} else {
+				console.log("http://github.com");
+			}
+
+			document.body.innerHTML = "<a href=\"" + url + "\">" + url + "</a>";
+			document.title = url;
+			window.location = url;
+		</script>
+	</body>
+</html>
